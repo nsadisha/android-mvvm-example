@@ -54,3 +54,17 @@ class MainFragment : Fragment() {
         return binding.root
     }
 }
+
+
+//benefits of di
+
+/*
+*
+* Reusability
+* Testability
+* Easy of refactoring
+* Avoid tight coupling
+*
+*
+*
+* */
