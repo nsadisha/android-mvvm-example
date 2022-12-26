@@ -12,7 +12,9 @@ import androidx.lifecycle.viewModelScope
 import com.nsadisha.exam_app_1.R
 import com.nsadisha.exam_app_1.databinding.FragmentMainBinding
 import com.nsadisha.exam_app_1.viewmodel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFragment : Fragment() {
     private lateinit var vm: MainViewModel
     private lateinit var binding: FragmentMainBinding
@@ -34,9 +36,9 @@ class MainFragment : Fragment() {
 //        }
 
         //show
-//        vm.count.observe(viewLifecycleOwner){
-//            binding.textView.text = it.toString()
-//        }
+        vm.count.observe(viewLifecycleOwner){
+            binding.textView.text = it.count.toString()
+        }
 
         //increment
 //        binding.button.setOnClickListener {
